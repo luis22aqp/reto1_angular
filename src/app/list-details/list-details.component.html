@@ -1,0 +1,18 @@
+<div class="list-group users-list">
+        <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Lista Detalle Clientes</li>
+                </ol>
+            </nav>   
+            
+    <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="row">
+        <div class="col col-md-8 text-col">
+            <h5 class="mb-1">{{item.payload.doc.data().nombre}} {{item.payload.doc.data().apellido}}</h5>
+            <small>Edad: {{item.payload.doc.data().edad }}</small><br>
+            <small>Fecha Nacimiento: {{item.payload.doc.data().fechaNacimiento}}</small><br>
+            <small>Pronostico de Muerte será: {{randomTime(item.payload.doc.data().fechaNacimiento)}}</small>
+        </div>
+        </div>
+    </div>
+</div>

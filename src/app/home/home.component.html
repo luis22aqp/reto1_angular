@@ -1,0 +1,24 @@
+<div class="list-group users-list">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+             <li class="breadcrumb-item active" aria-current="page">Lista Clientes</li>
+        </ol>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Promedio de Edad de Clientes: {{averageAge}}</li>
+          <li class="breadcrumb-item active" aria-current="page">Desviacion Estandar de Edad de Clientes: {{standardDeviation}}</li>
+        </ol>
+    </nav> 
+
+  <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="row">
+      <div class="col col-md-8 text-col">
+        <h5 class="mb-1">{{item.payload.doc.data().nombre}} {{item.payload.doc.data().apellido}}</h5>
+      </div>
+      <div class="col col-md-2 actions-col">
+        <button class="btn btn-outline-primary action" (click)="viewDetails(item)" type="button">
+          <ion-icon class="icon" name="arrow-round-forward"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.page-container {
+  display: grid;
+  grid-template-columns: 90px auto;
+  height: 100%;
+  padding: 0px;
+
+  .side-bar {
+    background: #252223;
+
+    .nav-link {
+      color: #FFF;
+      font-size: 20px;
+    }
+  }
+
+  .content-container {
+    margin-top: 30px;
+  }
+}
